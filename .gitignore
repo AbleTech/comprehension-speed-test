@@ -1,0 +1,7 @@
+*.log
+
+build/
+source/_bower
+
+.DS_Store
+thumbs.db

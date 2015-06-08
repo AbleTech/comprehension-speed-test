@@ -1,0 +1,14 @@
+{
+  "name": "comprehension-speed-test",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "_bower"
+  ],
+  "devDependencies": {
+  },
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-ui-router": "*"
+  }
+}

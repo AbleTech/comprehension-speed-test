@@ -1,0 +1,10 @@
+<div ng-controller="flashMessageController" ng-show="flashMessages.length">
+	<div ng-repeat="flashMessage in flashMessages track by $index" class="flash_message {{flashMessage.type}}" ng-show="isVisibile($index)">
+		<h1 ng-if="flashMessage.heading" class="heading heading_section">{{flashMessage.heading}}</h1>
+		<p ng-if="flashMessage.description" ng-bind-html="to_trusted(flashMessage.description)" ng-click="closeMessage($index)"></p>
+		<ul ng-if="flashMessage.list">
+			<li ng-repeat="item in flashMessage.list">{{item}}</li>
+		</ul>
+		<a href ng-click="closeMessage($index)" data-toggle-collapsed class="flash_close">Dismiss</a>
+	</div>
+</div>

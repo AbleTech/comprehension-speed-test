@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="cst" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title ng-bind="title">Comprehension Speed Test</title>
+    <%= javascript_include_tag 'manifest_lib' %>
+    <%= javascript_include_tag 'manifest_app' %>
+  </head>
+  <body class="{{themeClass}}" ng-class="{js_menu_closed: menu_closed}">
+    <header role="banner">
+      <h1>
+        <a ui-sref="home">Comprehension Speed Test</a>
+      </h1>
+      <nav>
+        <h2><a id="menu_link" ng-click="toggleMenu()">Menu</a></h2>
+        <ul id="menu">
+          <li><a ui-sref="join">Join</a></li>
+          <li><a ui-sref="host">Host</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      <%= partial 'partials/flash.message.html' %>
+      <%= yield %>
+    </main>
+    <footer role="contentinfo">
+      
+    </footer>
+  </body>
+</html>
