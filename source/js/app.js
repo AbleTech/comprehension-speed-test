@@ -43,6 +43,13 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 			title: 'Game lobby',
 			theme: ''
 		})
+			.state('game.race', {
+				url: '/{gameID}',
+				controller: 'gameRaceController',
+				templateUrl: '/game/race.html',
+				title: 'Go Go Go!',
+				theme: 'race'
+			})
 		;
 
 }]);

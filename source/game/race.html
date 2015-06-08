@@ -1,0 +1,32 @@
+<div class="layout layout_split">
+	<div class="layout_primary">
+		<form name="inputForm" ng-submit="addEntry()" class="layout_primary">
+			<div class="form_row">
+				<div class="field">
+					<input type="text" name="entry" ng-model="entry.text">
+				</div>
+			</div>
+			<div class="form_actions">
+				<input type="submit" value="add">
+			</div>
+		</form>
+		<section ng-show="userEntries">
+			<p>You entered:</p>
+			<ul>
+				<li ng-repeat="pastEntry in userEntries | orderBy:'text'">{{pastEntry.text}}</li>
+			</ul>
+		</section>
+	</div>
+	<aside class="layout_secondary">
+		<section>
+			<p>Time left: <strong>{{timeRemaining}}</strong></p>
+			<p>Entries added: <strong>{{userEntries.length}}/{{validEntriesLength}}</strong></p>
+		</section>
+		<section>
+			<p>Leaderboard</p>
+			<ul>
+				<li></li>
+			</ul>
+		</section>
+	</aside>
+</div>

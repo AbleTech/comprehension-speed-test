@@ -14,7 +14,12 @@ All players then race to enter as many possible answers within the victory condi
 
 ## Requirements
 
-* bower
+* Node (Use NVM!)
+	* bower
+		* AngularJS
+			* Angular UI-Router
+* Ruby (Use RVM!)
+	* Middleman (and associated plugins)
 
 ## Installation
 
